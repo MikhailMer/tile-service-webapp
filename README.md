@@ -43,24 +43,27 @@ To run this project locally for testing and evaluation, follow these steps:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/MikhailMer/tile-service-webapp.git
-   
    cd tile-service-webapp
    ```
    
 2. **Configure the Database:**
-   Make sure PostgreSQL is installed, then create a local database (e.g., tile_db). Update your credentials in src/main/resources/application.properties or pass them via environment variables:
+   Make sure PostgreSQL is installed, then create a local database (e.g., tile_db). Update your credentials in `src/main/resources/application.properties` or pass them via environment variables:
     ```bash   
     export DB_URL=jdbc:postgresql://localhost:5432/tile_db
     export DB_USERNAME=postgres
     export DB_PASSWORD=your_password
     ```
+   
 3. **Run the Application:**
-
 You can run the project via Maven or directly through your IDE (IntelliJ IDEA):
 ```bash 
 mvn spring-boot:run
 ```
 
 4. **Access the Application:**
-
 Open your browser and navigate to: http://localhost:8080
+
+
+5. **Access the Admin Panel:**
+   Open your browser at http://localhost:8080/login and sign in using your administrator credentials.
+   *(Note: Ensure you set the `ADMIN_USERNAME` and `ADMIN_PASSWORD` environment variables before running the application, as mapped in `src/main/resources/application.properties`).*
