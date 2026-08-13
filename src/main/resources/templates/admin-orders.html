@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>SM Tile Pro – Admin Panel</title>
+    <meta name="description"
+        content="Professional tile installation in San Antonio and nearby cities. Get an instant cost estimate and order our services online">
+    <meta name="keywords" content="tile installation, San Antonio, bathroom tiles, kitchen backsplash, floor tiles">
+    <meta name="Author" content="Developed by Mikhail Merzliakov for SM Tile Pro">
+    <meta name="Copyright" content="© 2026 SM Tile Pro. All rights reserved.">
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" th:href="@{/img/logo_black.svg}" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{/css/admin-style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__left">
+                <img th:src="@{/img/logo_white.svg}" alt="Logo" class="header__logo">
+                <span class="header__company-name">SM Tile Pro</span>
+            </div>
+            <div class="header__company-name header__welcome">Welcome, Admin</div>
+        </div>
+    </header>
+
+    <div class="table-clients__container">
+        <div class="table-clients">
+            <table class="table-clients__table">
+                <thead>
+                    <tr>
+                        <th class="table-clients__header">Order ID</th>
+                        <th class="table-clients__header">Client Information</th>
+                        <th class="table-clients__header">Requested Project Zones</th>
+                        <th class="table-clients__header">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="order : ${orders}">
+                        <td th:text="${'#' + order.id}">#1</td>
+
+                        <td>
+                            <span th:text="${order.name}" class="table-clients__name">Client </span>
+                            <br>
+                            <span th:text="${order.phone}" class="table-clients__phone">+1 (111) 111 1111</span>
+                        </td>
+
+                        <td>
+                            <div class="table-clients__zones">
+                                <div th:each="zone : ${order.zones}" class="table-clients__zone-card">
+                                    <span class="table-clients__zone-type" th:text="${zone.type}">Shower</span>
+                                    <span class="table-clients__zone-area"><strong th:text="${zone.area}">120</strong>
+                                        sq ft</span>
+
+                                    <span th:if="${zone.removal}" class="table-clients__removal-yes">Demolition
+                                        Needed</span>
+                                    <span th:if="${!zone.removal}" class="table-clients__removal-no">No
+                                        Demolition</span>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <form th:action="@{/admin/orders/delete/{id}(id=${order.id})}" method="post">
+                                <button type="submit" class="table-clients__btn-delete"
+                                    onclick="return confirm('Are you sure you want to delete this order?');">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <span class="footer__text">
+                © <span th:text="${#temporals.year(#temporals.createNow())}">2026</span> SM Tile Pro
+            </span>
+            <span class="footer__text">All Rights Reserved</span>
+            <a th:href="@{/}" class="footer__login-btn">Back to Website</a>
+            <form th:action="@{/logout}" method="post" class="footer__logout-form">
+                <button type="submit" class="footer__login-btn footer__logout">Logout</button>
+            </form>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>SM Tile Pro</title>
+    <meta name="description"
+        content="Professional tile installation in San Antonio and nearby cities. Get an instant cost estimate and order our services online">
+    <meta name="keywords" content="tile installation, San Antonio, bathroom tiles, kitchen backsplash, floor tiles">
+    <meta name="Author" content="Developed by Mikhail Merzliakov for SM Tile Pro">
+    <meta name="Copyright" content="© 2026 SM Tile Pro. All rights reserved.">
+    <meta name="robots" content="index, follow">
+    <meta name="_csrf" th:content="${_csrf.token}" />
+    <meta name="_csrf_header" th:content="${_csrf.headerName}" />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <link rel="icon" th:href="@{/img/logo_black.svg}" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{/css/main-style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__left">
+                <img th:src="@{/img/logo_white.svg}" alt="Logo" class="header__logo">
+                <span class="header__company-name">SM Tile Pro</span>
+            </div>
+            <nav class="header__center">
+                <a data-goto=".page__section-services" href="#" class="header__center-buttons"> Services</a>
+                <a data-goto=".page__section-about" href="#" class="header__center-buttons">About Us</a>
+                <a data-goto=".page__section-estimate" href="#" class="header__center-buttons">Estimate Cost</a>
+                <a data-goto=".page__section-quote" href="#" class="header__center-buttons fourth__button">Request a
+                    Quote</a>
+            </nav>
+            <div class="header__right">
+                <a data-goto=".page__section-quote" href="#" class="header__quote-button">Request a Quote</a>
+            </div>
+            <div class="header__menu-icon">
+                <span class="burger"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero__section">
+        <div class="hero__container">
+            <div class="hero__text1">
+                PROFESSIONAL TILE INSTALLATION <br> FOR YOUR HOME
+            </div>
+            <div class="hero__text2">
+                Serving San Antonio, Boerne, New Braunfels, <br> Seguin, Castroville, Floresville, and Canyon Lake
+            </div>
+        </div>
+    </div>
+
+    <section class="page__section page__section-services">
+        <div class="page__all-services">
+            <div class="page__name-section">
+                <div class="page__text">Our Services</div>
+            </div>
+
+            <div class="page__container">
+                <div class="page__room">
+                    <div class="page__info">
+                        <div class="page__installation">
+                            <div class="page__text">Bathroom tile installation</div>
+                        </div>
+                        <div class="page__description">Expert tile installation for showers, walls, and bathroom floors.
+                            We build durable and waterproof shower systems designed to last for years</div>
+                        <div class="page__materials">
+                            Materials we work with:
+                            <br>
+                            <br>
+                            <ul class="page__list-of-materials">
+                                <li>• Ceramic tile</li>
+                                <li>• Porcelain tile</li>
+                                <li>• Marble</li>
+                                <li>• Travertine</li>
+                                <li>• Natural stone</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page__image">
+                        <img th:src="@{/img/shower.jpg}" alt="Shower" class="room__image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="page__container page__container-kitchen">
+                <div class="page__room">
+                    <div class="page__image page__kitchen-image">
+                        <img th:src="@{/img/backsplash.jpg}" alt="Kitchen" class="room__image">
+                    </div>
+                    <div class="page__info page__only-kitchen">
+                        <div class="page__installation">
+                            <div class="page__text">Kitchen Backsplash Installation</div>
+                        </div>
+                        <div class="page__description">Beautiful and durable tile backsplashes for
+                            kitchens that add style and protect your walls
+                            from moisture and stains</div>
+                        <div class="page__materials">
+                            Materials we work with:
+                            <br>
+                            <br>
+                            <ul class="page__list-of-materials">
+                                <li>• Ceramic tile</li>
+                                <li>• Porcelain tile</li>
+                                <li>• Glass tile</li>
+                                <li>• Marble mosaic</li>
+                                <li>• Subway tile</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page__container">
+                <div class="page__room">
+                    <div class="page__info">
+                        <div class="page__installation">
+                            <div class="page__text">Floor & Wall Tile Installation</div>
+                        </div>
+                        <div class="page__description">Professional tile installation for floors and walls
+                            in living areas, hallways, patios, and other
+                            spaces</div>
+                        <div class="page__materials">
+                            Available patterns:
+                            <br>
+                            <br>
+                            <ul class="page__list-of-materials">
+                                <li>• Straight / Stacked</li>
+                                <li>• 50% offset</li>
+                                <li>• 33% offset</li>
+                                <li>• Herringbone</li>
+                                <li>• Random pattern</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page__image">
+                        <img th:src="@{/img/floor.jpg}" alt="Shower" class="room__image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="project__section">
+        <div class="page__name-section">
+            <div class="page__text">OUR RECENT PROJECTS</div>
+        </div>
+        <div class="project__container">
+            <div class="project__photo">
+                <img th:src="@{/img/1.jpg}" alt="Project 1" class="project__image">
+            </div>
+            <div class="project__photo">
+                <img th:src="@{/img/2.jpg}" alt="Project 2" class="project__image">
+            </div>
+            <div class="project__photo">
+                <img th:src="@{/img/3.jpg}" alt="Project 3" class="project__image">
+            </div>
+            <div class="project__photo">
+                <img th:src="@{/img/4.jpg}" alt="Project 4" class="project__image">
+            </div>
+            <div class="project__photo">
+                <img th:src="@{/img/5.jpg}" alt="Project 5" class="project__image">
+            </div>
+            <div class="project__photo">
+                <img th:src="@{/img/6.jpg}" alt="Project 6" class="project__image">
+            </div>
+        </div>
+    </div>
+
+    <section class="page__section page__section-about">
+        <div class="about__container">
+            <div class="page__name-section about__name-section">
+                <div class="page__text">WHY CHOOSE US</div>
+            </div>
+            <ul class="about__why">
+                <li><span class="about__dot">•</span>European-quality craftsmanship – we deliver the precision and
+                    standards you expect.</li>
+                <li><span class="about__dot">•</span>Expert technical guidance – we explain the best installation
+                    practices so clients
+                    understand the process.</li>
+                <li><span class="about__dot">•</span>Careful demolition if needed – removing old tile safely without
+                    damaging the home.
+                </li>
+                <li><span class="about__dot">•</span>Residential focus – we work carefully in homes so nothing is
+                    broken or scratched.</li>
+                <li><span class="about__dot">•</span>Clean and professional – we clean up after ourselves, leaving the
+                    space ready to use.</li>
+                <li><span class="about__dot">•</span>Flexible project support – from bathrooms and kitchens to floors
+                    and backsplashes.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="clients__container">
+        <div class="page__name-section">
+            <div class="page__text">WHAT OUR CLIENTS SAY</div>
+        </div>
+        <div class="clients__all-reviews">
+            <div class="clients__review">
+                <div class="clients__picture">
+                    <img th:src="@{/img/review_1.jpg}" alt="First Client" class="clients__image">
+                </div>
+                <div class="clients__words">“I was worried because my travertine tiles didn’t perfectly line up at the
+                    corners, but they installed everything flawlessly – you can’t see any misalignment!”</div>
+                <div class="clients__name">Steven</div>
+            </div>
+            <div class="clients__review">
+                <div class="clients__picture">
+                    <img th:src="@{/img/review_2.jpg}" alt="Second Client" class="clients__image">
+                </div>
+                <div class="clients__words">“I’m really pleased with the shower – the mosaic strip flows onto the floor
+                    like a waterfall, and they installed it all without cutting any tiles.”</div>
+                <div class="clients__name">Georgiana</div>
+            </div>
+            <div class="clients__review">
+                <div class="clients__picture">
+                    <img th:src="@{/img/review_3.jpg}" alt="Third Client" class="clients__image">
+                </div>
+                <div class="clients__words">“They installed the heavy stone tiles around a large doorway perfectly, and
+                    I’m impressed they didn’t get any paint on the nearby wall – everything was done so cleanly.”</div>
+                <div class="clients__name">Caesar</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="calculator__container page__section-estimate">
+        <div class="page__name-section">
+            <div class="page__text">ESTIMATE YOUR PROJECT COST</div>
+        </div>
+        <div class="calculator__all-settings">
+            <form class="calculator__form" action="#" method="post">
+                <div class="calculator__item">
+                    <label class="calculator__label">Project Type</label>
+                    <div class="calculator__select-wrapper">
+                        <select name="project-type1" class="calculator__select-item">
+                            <option value="" disabled selected>Select Project Type</option>
+                            <option value="bathroom">Bathroom</option>
+                            <option value="shower">Shower</option>
+                            <option value="kitchen">Kitchen Backsplash</option>
+                            <option value="floor">Floor installation</option>
+                            <option value="wall">Wall installation</option>
+                            <option value="outdoor">Outdoor tile</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calculator__item">
+                    <label class="calculator__label">Approximate area</label>
+                    <div class="calculator__enter-digits">
+                        <input type="number" id="area-input" class="calculator__input-field" placeholder="Enter sq ft"
+                            min="0">
+                        <div class="calculator__ft">sq ft</div>
+                    </div>
+                </div>
+                <div class="calculator__item">
+                    <label class="calculator__label">Tile material</label>
+                    <div class="calculator__select-wrapper">
+                        <select name="project-type2" class="calculator__select-item">
+                            <option value="" disabled selected>Select Tile Material</option>
+                            <option value="ceramic">Ceramic / Porcelain</option>
+                            <option value="marble">Marble / Travertine</option>
+                            <option value="mosaic">Mosaic</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calculator__item">
+                    <label class="calculator__label">Tile pattern</label>
+                    <div class="calculator__select-wrapper">
+                        <select name="project-type3" class="calculator__select-item">
+                            <option value="" disabled selected>Select Tile Pattern</option>
+                            <option value="straight">Straight / Stacked</option>
+                            <option value="offset">Offset (33% / 50%)</option>
+                            <option value="herringbone">Herringbone</option>
+                            <option value="mosaic-pattern">Mosaic</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calculator__item">
+                    <label class="calculator__label">Include old tile removal?</label>
+                    <div class="calculator__buttons">
+                        <label class="calculator__radio-btn">
+                            <input type="radio" name="tile-removal" value="yes">
+                            <span class="calculator__radio-custom">YES</span>
+                        </label>
+                        <label class="calculator__radio-btn">
+                            <input type="radio" name="tile-removal" value="no">
+                            <span class="calculator__radio-custom">NO</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="calculator__estimate">
+                    <button type="button" id="calculator__btn" class="calculator__btn-main">Calculate Estimate</button>
+                </div>
+                <div id="result-block" class="calculator__result">
+                    <div class="calculator__text-result">Estimated Cost:</div>
+                    <div class="calculator__result-sum">
+                        <span id="total-price">$0</span>
+                    </div>
+                </div>
+                <div id="error-block" class="calculator__error">Please fill in all fields to get
+                    an estimate</div>
+            </form>
+        </div>
+    </section>
+
+    <div class="questions__container">
+        <div class="page__name-section">
+            <div class="page__text">FREQUENTLY ASKED QUESTIONS</div>
+        </div>
+        <div class="questions__list">
+            <div class="questions__item">
+                <button type="button" class="questions__question">
+                    <span class="questions__question-text">Why can the final cost differ from the estimate?</span>
+                    <div class="questions__icon"></div>
+                </button>
+                <div class="questions__answer">
+                    <div class="questions__answer-content">
+                        The estimate is based on area, tile type, pattern, and whether
+                        old tiles need removal. The final cost may change
+                        depending on project details, for example, if we cannot leave tools on-site overnight, we need
+                        time each day to
+                        bring them in and out. It also depends on the number of outlets or pipes to work around and the
+                        number of
+                        doorways to cross during floor tile installation. We provide a precise cost after inspecting the
+                        project.
+                    </div>
+                </div>
+            </div>
+
+            <div class="questions__item">
+                <button type="button" class="questions__question">
+                    <span class="questions__question-text">Do you provide a warranty?</span>
+                    <div class="questions__icon"></div>
+                </button>
+                <div class="questions__answer">
+                    <div class="questions__answer-content">
+                        Yes, we provide a 1-year warranty on our workmanship. If any issues arise,
+                        we are ready to fix them promptly.
+                    </div>
+                </div>
+            </div>
+
+            <div class="questions__item">
+                <button type="button" class="questions__question">
+                    <span class="questions__question-text">Do you provide materials or only installation?</span>
+                    <div class="questions__icon"></div>
+                </button>
+                <div class="questions__answer">
+                    <div class="questions__answer-content">
+                        We specialize in professional tile installation, but we can advise you on
+                        materials if needed.
+                    </div>
+                </div>
+            </div>
+
+            <div class="questions__item">
+                <button type="button" class="questions__question">
+                    <span class="questions__question-text">How long does a typical project take?</span>
+                    <div class="questions__icon"></div>
+                </button>
+                <div class="questions__answer">
+                    <div class="questions__answer-content">
+                        Duration depends on the size and complexity of the project. A single shower
+                        can usually be completed in about a week, while multiple showers, floors,
+                        and one kitchen backsplash can take around a month.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="request__container page__section-quote">
+        <div class="page__name-section">
+            <div class="page__text">REQUEST A QUOTE</div>
+        </div>
+
+        <div class="request__all-settings calculator__all-settings">
+            <form class="request__form" id="quoteForm" action="/order/submit" method="post">
+                <div class="request__quote-field">
+                    <div class="request__client-info calculator__item">
+                        <label class="request__quote-label calculator__label" for="client-name">Full name</label>
+                        <input type="text" id="client-name" name="fullName" class="request__input" required>
+                    </div>
+                    <div class="request__honeypot-wrapper">
+                        <label for="client-middlename">Middle Name</label>
+                        <input type="text" id="client-middlename" name="middleName" autocomplete="off" tabindex="-1">
+                    </div>
+                    <div class="request__client-info calculator__item">
+                        <label class="request__quote-label calculator__label" for="client-phone">Phone number</label>
+                        <input type="tel" id="client-phone" name="phone" class="request__input" required>
+                    </div>
+                </div>
+
+                <div id="zones-container" class="request__zones-list">
+                    <div class="request__zone-item" data-zone-index="0">
+
+                        <div class="request__field calculator__item">
+                            <label class="request__quote-label calculator__label">Type of zone</label>
+                            <div class="request__select-wrapper calculator__select-wrapper">
+                                <select name="zones[0].type" class="request__select calculator__select-item" required>
+                                    <option value="" disabled selected>Select zone type</option>
+                                    <option value="bathroom">Bathroom</option>
+                                    <option value="shower">Shower</option>
+                                    <option value="kitchen">Kitchen Backsplash</option>
+                                    <option value="floor">Floor installation</option>
+                                    <option value="wall">Wall installation</option>
+                                    <option value="outdoor">Outdoor tile</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="request__field calculator__item">
+                            <label class="request__quote-label calculator__label">Approximate area</label>
+                            <div class="request__input-group calculator__enter-digits">
+                                <input type="number" name="zones[0].area"
+                                    class="request__input request__input--area calculator__input-field"
+                                    placeholder="Enter sq ft" min="1" required>
+                                <span class="request__unit calculator__ft">sq ft</span>
+                            </div>
+                        </div>
+
+                        <div class="request__field calculator__item">
+                            <label class="request__quote-label calculator__label">Do you need old tile removal in this
+                                zone?</label>
+                            <div class="request__radio-group calculator__buttons">
+                                <label class="request__radio-btn calculator__radio-btn">
+                                    <input type="radio" name="zones[0].removal" value="yes" required>
+                                    <span class="request__radio-custom calculator__radio-custom">YES</span>
+                                </label>
+                                <label class="request__radio-btn calculator__radio-btn">
+                                    <input type="radio" name="zones[0].removal" value="no" required>
+                                    <span class="request__radio-custom calculator__radio-custom">NO</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <input type="hidden" id="project-details-hidden" name="projectDetails">
+
+                
+
+                <div class="request__buttons">
+                    <button type="button" id="add-zone-btn" class="request__btn-add">Add another zone</button>
+                    <button type="submit" class="request__btn-submit">Submit Request</button>
+                </div>
+
+                <br>
+                <br>
+                <div class="cf-turnstile" th:data-sitekey="${turnstileSiteKey}" data-theme="light"></div>
+
+                <div id="request-message-success" class="calculator__result request__message-success">
+                    <span class="calculator__text-result">Request sent successfully! We will text you soon.</span>
+                </div>
+
+                <div id="request-message-error" class="calculator__error">
+                    Please fill out all fields correctly!
+                </div>
+
+                <div id="request-message-server-error" class="calculator__error">
+                    Something went wrong on the server. Please try again later!
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <span class="footer__text">
+                © <span th:text="${#temporals.year(#temporals.createNow())}">2026</span> SM Tile Pro
+            </span>
+            <span class="footer__text">All Rights Reserved</span>
+            <a th:href="@{/login}" class="footer__login-btn">Login</a>
+        </div>
+    </footer>
+
+    <script th:src="@{/js/script.js}"></script>
+</body>
+
+</html>

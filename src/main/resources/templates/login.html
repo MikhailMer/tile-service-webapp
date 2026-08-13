@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>SM Tile Pro – Login</title>
+    <meta name="description"
+        content="Professional tile installation in San Antonio and nearby cities. Get an instant cost estimate and order our services online">
+    <meta name="keywords" content="tile installation, San Antonio, bathroom tiles, kitchen backsplash, floor tiles">
+    <meta name="Author" content="Developed by Mikhail Merzliakov for SM Tile Pro">
+    <meta name="Copyright" content="© 2026 SM Tile Pro. All rights reserved.">
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <link rel="icon" th:href="@{/img/logo_black.svg}" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{/css/login-style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="login__body">
+        <div class="login__container">
+            <div class="login__company-name">
+                <img th:src="@{/img/logo_white.svg}" alt="Logo" class="login__logo">
+                <div class="login__title">SM Tile Pro Access</div>
+            </div>
+
+
+
+            <form th:action="@{/login}" method="post" class="login__form">
+                <div class="login__form-group">
+                    <label class="login__label" for="username">Username</label>
+                    <input class="login__input" type="text" id="username" name="username" required autocomplete="off">
+                </div>
+
+                <div class="login__form-group">
+                    <label class="login__label" for="password">Password</label>
+                    <input class="login__input" type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="login__login-btn">Sign In</button>
+                
+                <div class="cf-turnstile" th:data-sitekey="${turnstileSiteKey}" data-theme="light"></div>
+            </form>
+
+            <div th:if="${param.error}" class="login__error-message">
+                Invalid username or password. Please try again.
+            </div>
+
+            <a th:href="@{/}" class="login__back-link">Back to Website</a>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
