@@ -42,8 +42,9 @@ To run this project locally for testing and evaluation, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/TileWebsite.git
-   cd TileWebsite
+   git clone https://github.com/MikhailMer/tile-service-webapp.git
+   
+   cd tile-service-webapp
    ```
    
 2. **Configure the Database:**
